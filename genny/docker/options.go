@@ -1,8 +1,8 @@
 package docker
 
 import (
-	"github.com/gobuffalo/buffalo/meta"
 	"github.com/gobuffalo/buffalo/runtime"
+	"github.com/gobuffalo/meta"
 	"github.com/pkg/errors"
 )
 
@@ -15,7 +15,7 @@ type Options struct {
 
 // Validate that options are usuable
 func (opts *Options) Validate() error {
-	if (opts.App == meta.App{}) {
+	if opts.App.IsZero() {
 		opts.App = meta.New(".")
 	}
 	if len(opts.Version) == 0 {
