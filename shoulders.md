@@ -5,6 +5,8 @@ github.com/gobuffalo/buffalo-docker does not try to reinvent the wheel! Instead,
 Thank you to the following **GIANTS**:
 
 
+* [github.com/BurntSushi/toml](https://godoc.org/github.com/BurntSushi/toml)
+
 * [github.com/gobuffalo/buffalo-docker](https://godoc.org/github.com/gobuffalo/buffalo-docker)
 
 * [github.com/gobuffalo/buffalo-docker/cmd](https://godoc.org/github.com/gobuffalo/buffalo-docker/cmd)
@@ -37,6 +39,8 @@ Thank you to the following **GIANTS**:
 
 * [github.com/gobuffalo/genny/movinglater/gotools/gomods](https://godoc.org/github.com/gobuffalo/genny/movinglater/gotools/gomods)
 
+* [github.com/gobuffalo/logger](https://godoc.org/github.com/gobuffalo/logger)
+
 * [github.com/gobuffalo/mapi](https://godoc.org/github.com/gobuffalo/mapi)
 
 * [github.com/gobuffalo/meta](https://godoc.org/github.com/gobuffalo/meta)
@@ -49,7 +53,7 @@ Thank you to the following **GIANTS**:
 
 * [github.com/markbates/oncer](https://godoc.org/github.com/markbates/oncer)
 
-* [github.com/pelletier/go-toml](https://godoc.org/github.com/pelletier/go-toml)
+* [github.com/markbates/safe](https://godoc.org/github.com/markbates/safe)
 
 * [github.com/pkg/errors](https://godoc.org/github.com/pkg/errors)
 
