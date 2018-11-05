@@ -45,6 +45,8 @@ Thank you to the following **GIANTS**:
 
 * [github.com/gobuffalo/meta](https://godoc.org/github.com/gobuffalo/meta)
 
+* [github.com/gobuffalo/packd](https://godoc.org/github.com/gobuffalo/packd)
+
 * [github.com/gobuffalo/packr](https://godoc.org/github.com/gobuffalo/packr)
 
 * [github.com/joho/godotenv](https://godoc.org/github.com/joho/godotenv)
