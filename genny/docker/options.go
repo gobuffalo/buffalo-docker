@@ -10,7 +10,6 @@ type Options struct {
 	App     meta.App `json:"app"`
 	Version string   `json:"version"`
 	Style   string   `json:"style"`
-	AsWeb   bool     `json:"as_web"`
 }
 
 // Validate that options are usuable
