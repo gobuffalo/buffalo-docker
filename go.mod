@@ -7,6 +7,7 @@ require (
 	github.com/gobuffalo/gogen v0.0.0-20190224213239-1c6076128bbc
 	github.com/gobuffalo/meta v0.0.0-20190207205153-50a99e08b8cf
 	github.com/gobuffalo/packr v1.22.0
+	github.com/gobuffalo/packr/v2 v2.0.1
 	github.com/pkg/errors v0.8.1
 	github.com/spf13/cobra v0.0.3
 	github.com/stretchr/testify v1.3.0
