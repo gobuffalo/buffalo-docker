@@ -20,7 +20,10 @@ ADD . .
 {{if .opts.App.WithDep -}}
 RUN dep ensure
 {{else -}}
-RUN go get $(go list ./... | grep -v /vendor/)
+{{if .opts.App.WithModules -}}
+ENV GO111MODULES=on
+{{end -}}
+RUN go get ./...
 {{end -}}
 RUN buffalo build --static -o /bin/app
 
