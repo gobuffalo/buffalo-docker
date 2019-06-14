@@ -1,9 +1,10 @@
 package docker
 
 import (
+	"fmt"
+
 	"github.com/gobuffalo/buffalo/runtime"
 	"github.com/gobuffalo/meta"
-	"github.com/pkg/errors"
 )
 
 type Options struct {
@@ -27,7 +28,7 @@ func (opts *Options) Validate() error {
 	switch opts.Style {
 	case "multi", "standard":
 	default:
-		return errors.Errorf("unknown style option %s", opts.Style)
+		return fmt.Errorf("unknown style option %s", opts.Style)
 	}
 
 	return nil

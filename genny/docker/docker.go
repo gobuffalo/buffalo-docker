@@ -5,28 +5,27 @@ import (
 
 	"github.com/gobuffalo/genny"
 	"github.com/gobuffalo/gogen"
-	"github.com/gobuffalo/packr"
-	"github.com/pkg/errors"
+	"github.com/gobuffalo/packr/v2"
 )
 
 func New(opts *Options) (*genny.Generator, error) {
 	g := genny.New()
 
 	if err := opts.Validate(); err != nil {
-		return g, errors.WithStack(err)
+		return g, err
 	}
 
 	data := map[string]interface{}{
 		"opts": opts,
 	}
 
-	g.Box(packr.NewBox("../docker/templates/common"))
+	g.Box(packr.New("github.com/gobuffalo/buffalo-docker/common", "../docker/templates/common"))
 
 	switch opts.Style {
 	case "multi":
-		g.Box(packr.NewBox("../docker/templates/multi"))
+		g.Box(packr.New("github.com/gobuffalo/buffalo-docker/multi", "../docker/templates/multi"))
 	case "standard":
-		g.Box(packr.NewBox("../docker/templates/standard"))
+		g.Box(packr.New("github.com/gobuffalo/buffalo-docker/standard", "../docker/templates/standard"))
 	}
 
 	helpers := template.FuncMap{}
