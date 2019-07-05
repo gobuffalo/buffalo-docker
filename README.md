@@ -18,5 +18,5 @@ $ go get -u -v github.com/gobuffalo/buffalo-docker
 ## Usage
 
 ```bash
-$ buffalo docker --help
+$ buffalo-docker --help
 ```
