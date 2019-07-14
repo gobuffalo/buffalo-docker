@@ -2,8 +2,13 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:{{.opts.Version}} as builder
 
+{{if .opts.App.WithModules -}}
+RUN mkdir -p /src
+WORKDIR /src
+{{else -}}
 RUN mkdir -p $GOPATH/src/{{.opts.App.PackagePkg}}
 WORKDIR $GOPATH/src/{{.opts.App.PackagePkg}}
+{{end -}}
 
 {{if .opts.App.WithWebpack -}}
 # this will cache the npm install step, unless package.json changes
@@ -21,7 +26,7 @@ ADD . .
 RUN dep ensure
 {{else -}}
 {{if .opts.App.WithModules -}}
-ENV GO111MODULES=on
+ENV GO111MODULE=on
 {{end -}}
 RUN go get ./...
 {{end -}}
