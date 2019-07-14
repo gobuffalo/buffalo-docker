@@ -6,7 +6,15 @@ builds:
   goos:
     - darwin
     - linux
-    - windows
+    - 
+  goarch:
+    - amd64
+    - 386
+    - arm
+    - arm64
+  goarm:
+    - 6
+    - 7
   env:
     - CGO_ENABLED=0
   main: main.go
