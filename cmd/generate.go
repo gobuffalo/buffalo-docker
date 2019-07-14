@@ -6,7 +6,6 @@ import (
 	"github.com/gobuffalo/buffalo-docker/genny/docker"
 	"github.com/gobuffalo/genny"
 	"github.com/gobuffalo/gogen"
-	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
 
@@ -31,13 +30,13 @@ var generateCmd = &cobra.Command{
 
 		g, err := docker.New(generateOptions.Options)
 		if err != nil {
-			return errors.WithStack(err)
+			return err
 		}
 		r.With(g)
 
 		g, err = gogen.Fmt(r.Root)
 		if err != nil {
-			return errors.WithStack(err)
+			return err
 		}
 		r.With(g)
 
